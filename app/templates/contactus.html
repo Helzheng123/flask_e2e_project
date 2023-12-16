@@ -1,0 +1,70 @@
+{% extends "index.html" %} 
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-info">
+        <p>If you have any questions or concerns, feel free to reach out to us:</p>
+        <ul>
+            <li>Email: <a href="mailto:hz@gmail.com">info@gmail.com</a></li>
+            <li>Phone: +1 (123) 456-7890</li>
+            <li>Address: 123 Main Street, New York City, NY 12345</li>
+        </ul>
+    </div>
+
+    <form>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+{% endblock %}
