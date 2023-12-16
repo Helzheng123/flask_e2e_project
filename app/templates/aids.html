@@ -1,0 +1,39 @@
+{% extends "index.html" %} 
+
+        {% block content %}
+            <div class="table">
+                <h2 class="text-xl mb-2">Annual Report of AIDS in New York City</h2>
+                <table style="border-collapse: collapse; width: 100%;">
+                    <thead>
+                        <tr style="border: 1px solid #000000;"">
+                            <th style="border: 1px solid #000000; padding: 8px">Year</th>
+                            <th style="border: 1px solid #000000; padding: 8px">Borough</th>
+                            <th style="border: 1px solid #000000; padding: 8px">UHF</th>
+                            <th style="border: 1px solid #000000; padding: 8px">Gender</th>
+                            <th style="border: 1px solid #000000; padding: 8px">Age</th>
+                            <th style="border: 1px solid #000000; padding: 8px">Race</th>
+                            <th style="border: 1px solid #000000; padding: 8px">AIDS diagnoses</th>
+                            <th style="border: 1px solid #000000; padding: 8px">AIDS diagnoses rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for data in data.values %}
+                        <tr style="border: 1px solid #000000;"">
+                            <td style="border: 1px solid #000000; padding: 8px;">{{ data[0] }}</td>
+                            <td style="border: 1px solid #000000; padding: 8px;">{{ data[1] }}</td>
+                            <td style="border: 1px solid #000000; padding: 8px;">{{ data[2] }}</td>
+                            <td style="border: 1px solid #000000; padding: 8px;">{{ data[3] }}</td>
+                            <td style="border: 1px solid #000000; padding: 8px;">{{ data[4] }}</td>
+                            <td style="border: 1px solid #000000; padding: 8px;">{{ data[5] }}</td>
+                            <td style="border: 1px solid #000000; padding: 8px;">{{ data[10] }}</td>
+                            <td style="border: 1px solid #000000; padding: 8px;">{{ data[11] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <br/>
+
+        {% endblock %}

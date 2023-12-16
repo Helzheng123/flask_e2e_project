@@ -34,10 +34,20 @@ def mainpage():
     return render_template('index.html')
 
 df = pd.read_csv('/home/helen_zheng/flask_e2e_project/data/cleaned_data.csv')
-@app.route('/report')
-def report(data=df):
+@app.route('/hiv')
+def hiv(data=df):
     data = data.sample(50)
-    return render_template('report.html', data=data)
+    return render_template('hiv.html', data=data)
+
+@app.route('/aids')
+def aids(data=df):
+    data = data.sample(50)
+    return render_template('aids.html', data=data)
+
+@app.route('/death')
+def death(data=df):
+    data = data.sample(50)
+    return render_template('death.html', data=data)
 
 #@app.route('/report')
 #def report():
