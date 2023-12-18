@@ -13,9 +13,10 @@
 <body class="bg-gray-200">
 
     <header class="bg-blue-400 text-white p-4">
-        <h1 class="text-2xl">Azure Deployment Flask App for Annual Report</h1>
+        <h1 class="text-2xl">Department of Health and Mental Hygiene HIV and AIDS Annual Report</h1>
         <nav>
-            <ul class="flex space-x-4">
+            <ul class="flex space-x-4">  
+                <li><a href="/auth" class="hover:underline">Authenticate</a></li>
                 <li><a href="/" class="hover:underline">Home</a></li>
                 <li><a href="/hiv" class="hover:underline">HIV</a></li>
                 <li><a href="/aids" class="hover:underline">AIDS</a></li>
@@ -30,15 +31,16 @@
 
         {% block content %}        
             <p>WELCOME!</p>
-            <p>This is an example deployment for a database with NYC data</p>
+            <p>This is a deployment for an application with NYC data from the Department of Health and Mental Hygiene!</p>
             </br>
-            <p>Navigate to the different sections of the database!</p>
+            <p>This application contains data from the different boroughs and UHFs from 2011-2021. </p>
+            <p>Navigate to the different sections of the application!</p>
         {% endblock %}
 
     </main>
 
     <footer class="bg-blue-400 text-white p-4 mt-6">
-        <p>© 2023 My Healthcare App. All Rights Reserved.</p>
+        <p>© 2023 HIV/AIDS NYC REPORT. All Rights Reserved.</p>
     </footer>
 </body>
 

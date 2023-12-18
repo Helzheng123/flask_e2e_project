@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>NYC Annual Report</title>
+</head>
+<header class="bg-blue-400 text-white p-4">
+    <h1 class="text-2xl">Department of Health and Mental Hygiene HIV and AIDS Annual Report</h1>
+    <body class="bg-gray-200">
+    <nav>
+        <ul class="flex space-x-4">  
+            <li><a href="/auth" class="hover:underline">Authenticate</a></li>
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/hiv" class="hover:underline">HIV</a></li>
+            <li><a href="/aids" class="hover:underline">AIDS</a></li>
+            <li><a href="/death" class="hover:underline">Deaths</a></li>
+            <li><a href="/report" class="hover:underline">Report</a></li>
+            <li><a href="/contactus" class="hover:underline">Contact Us</a></li>
+        </ul>
+    </body>
+    </nav>
+</header>
+<br>
+<body class="flex items-center justify-center h-screen bg-blue-100">
+    <div>
+        <a href="google/" class="login-btn" style="text-decoration:none;">
+    <button class="login-btn bg-blue-400 hover:bg-blue-600 text-white font-semibold text-1g py-2 px-4 rounded transition flex items-center align-items center">
+            <img id="google" src="https://play-lh.googleusercontent.com/aFWiT2lTa9CYBpyPjfgfNHd0r5puwKRGj2rHpdPTNrz2N9LXgN_MbLjePd1OTc0E8Rl1=w240-h480-rw"
+            alt="Google"
+            style="width: 100px; height: 100px;">
+            <span class="btn-text">Login with Google</span>
+    </button>
+    </div>
+</body>
+
+<footer class="bg-blue-400 text-white p-4 mt-6">
+    <p>© 2023 HIV/AIDS NYC REPORT. All Rights Reserved.</p>
+</footer>
+</html>
