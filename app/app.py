@@ -49,19 +49,19 @@ def death(data=df):
     data = data.sample(50)
     return render_template('death.html', data=data)
 
-#@app.route('/report')
-#def report():
-    # Establish a database connection
-#    with engine.connect() as connection:
-        # Execute an SQL query to fetch data (replace this with your query)
-#        query1 = text('SELECT * FROM report')
+@app.route('/report')
+def report():
+    # establish a database connection
+    with engine.connect() as connection:
+        # execute an SQL query to fetch data
+        query1 = text('SELECT * FROM report')
 
-#        result1 = connection.execute(query1)
+        result1 = connection.execute(query1)
 
-        # Fetch all rows of data
-#        db_data1 = result1.fetchall()
+        # fetch all rows of data
+        db_data1 = result1.fetchall()
 
-#    return render_template('report.html', data1=db_data1)
+    return render_template('report.html', data1=db_data1)
 
 @app.route('/contactus')
 def contactus():
