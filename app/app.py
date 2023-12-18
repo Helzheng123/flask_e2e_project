@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect, session
+from flask import Flask, render_template, request, url_for, redirect, session, jsonify
 import os
 from dotenv import load_dotenv
 import pandas as pd
@@ -7,8 +7,23 @@ from sqlalchemy import create_engine, text
 from authlib.integrations.flask_client import OAuth
 from authlib.common.security import generate_token
 from db_functions import update_or_create_user
+import sentry_sdk
 
-load_dotenv()  # Load environment variables from .env file
+# sentry.io
+sentry_sdk.init(
+    dsn="https://c48f7ab08d0501bbd02e58b296d8da44@o4506418296651776.ingest.sentry.io/4506418420252672",
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    traces_sample_rate=1.0,
+    # Set profiles_sample_rate to 1.0 to profile 100%
+    # of sampled transactions.
+    # We recommend adjusting this value in production.
+    profiles_sample_rate=1.0,
+)
+
+
+# Load environment variables from .env file
+load_dotenv()  
 
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
 GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
@@ -39,13 +54,13 @@ oauth = OAuth(app)
 
 @app.route('/')
 def mainpage():
-    return render_template('index.html')
+    return render_template('auth.html')
 
 @app.route('/auth')
 def auth():
-    return render_template('auth.html')
+    return render_template('index.html')
 
-df = pd.read_csv('/home/helen_zheng/flask_e2e_project/data/cleaned_data.csv')
+df = pd.read_csv('/home/helen_zheng/flask_e2e_project/app/data/cleaned_data.csv')
 @app.route('/hiv')
 def hiv(data=df):
     data = data.sample(50)
@@ -79,7 +94,14 @@ def report():
 def contactus():
     return render_template('contactus.html')
 
-
+# API 
+@app.route('/hello', methods=['GET'])
+def hello_get():
+    name = request.args.get('name', 'World')
+    lastname = request.args.get('lastname', 'no last name provided')
+    nameCapital = name.upper()
+    lastnameCapital = lastname.upper()
+    return jsonify({'message': f'Hello {nameCapital} {lastnameCapital}! This is the Annual Report for HIV/AIDS in NYC.'})
 
 @app.route('/google/')
 def google():
@@ -125,5 +147,12 @@ def logout():
     session.pop('user', None)
     return redirect('/')
 
+@app.route('/error')
+def creating_error():
+    try:
+        1/0
+    except Exception as e:
+        raise Exception (f'Error for Sentry: {e}')
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
