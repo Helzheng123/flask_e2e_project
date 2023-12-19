@@ -16,3 +16,7 @@ A combination of the tools and services we learned this semester for HHA 504 Clo
 - Docker (Containerization)
 - Azure (Deployment)
 
+## Web Service: 
+ - This is a web service using Flask to display the data of the New York City Department of Health and Mental Hygiene. The data displays 2011-2021 report on HIV and AIDS.
+ - This Flask app is deployed on Azure.
+ - There are 7 tabs that you can navigate to. When running the page, the first part will be the Google Authentication. This can also be found in the **Authenticate** tab. The **Home** page shows a brief description of the web service. 
