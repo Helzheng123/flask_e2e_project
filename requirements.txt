@@ -1,6 +1,0 @@
-flask
-pandas
-sqlalchemy
-pymysql
-faker
-python-dotenv
