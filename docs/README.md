@@ -147,6 +147,11 @@ API:
 
 ![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/32198192-5c0f-4eb5-9195-0b656a6f4717)
 
+Sentry:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/6cdebafc-c8b0-4450-90c4-dac9c198cabb)
+
+
 Dockerfile output:
 
 ![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/fb4c43d0-eab4-4553-9cb7-905bb9823e7f)
