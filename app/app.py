@@ -60,7 +60,7 @@ def mainpage():
 def auth():
     return render_template('index.html')
 
-df = pd.read_csv('/home/helen_zheng/flask_e2e_project/app/data/cleaned_data.csv')
+df = pd.read_csv('/home/helen_zheng/flask_e2e_project/data/cleaned_data.csv')
 @app.route('/hiv')
 def hiv(data=df):
     data = data.sample(50)
