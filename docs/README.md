@@ -97,5 +97,56 @@ DB_CHARSET = utf8mb4
 ## Screenshots and Video:
 All of the Screenshots can be found in the [```docs```](https://github.com/Helzheng123/flask_e2e_project/tree/main/docs) folder.
 
-Here is the video on running the Flask App locally:
-https://github.com/Helzheng123/flask_e2e_project/blob/main/docs/NYC%20Annual%20Report%20-%20Google%20Chrome%202023-12-18%2022-26-20.mp4
+Here is the [video](https://github.com/Helzheng123/flask_e2e_project/blob/main/docs/NYC%20Annual%20Report%20-%20Google%20Chrome%202023-12-18%2022-26-20.mp4) on running the Flask App locally showing the Google Authorization:
+
+Authenticate Page:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/bbb4521e-430f-4422-8a47-5952de2e205e)
+
+Home Page:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/fab9583e-884e-4951-9c11-a97ade6cafd1)
+
+Dashboard Page:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/5f851d83-12d4-49e3-9bb0-e4a4f05a23c5)
+
+HIV Page:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/5ea847c1-03f4-4d39-a6c8-532947b02b87)
+
+AIDS Page:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/8d4cd9d8-0402-4dfd-8b71-caaf2ae0ae8c)
+
+Deaths Page:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/d4676731-e2de-4899-bc04-5916b9715eaf)
+
+Report Page:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/b1a6b7ad-280d-406d-9ece-b07273adf3d3)
+
+Contact Us Page:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/65f7b709-117f-4db9-ad85-18c44e3f8229)
+
+Web App Page on Azure:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/4d31b12f-5b08-4834-b3b2-d86aa379a2be)
+
+Cloud Deployment via Azure:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/5ba7cabe-78c7-43ea-8156-5df235150a10)
+
+API Function App Page:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/efb8a98e-a906-4889-9067-61b168c4110a)
+
+API:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/32198192-5c0f-4eb5-9195-0b656a6f4717)
+
+Dockerfile output:
+
+![image](https://github.com/Helzheng123/flask_e2e_project/assets/123939070/fb4c43d0-eab4-4553-9cb7-905bb9823e7f)
